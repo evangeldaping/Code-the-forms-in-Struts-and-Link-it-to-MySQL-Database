@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="login" class="com.portal.action.LoginAction" method = "execute">
+            <result name="success">home.jsp</result>
+            <result name="error">signin.jsp</result>
+<!--             <result name="input">signin.jsp</result> -->
+        </action>
+
+        <action name="registeruser" class="com.portal.action.RegisterAction" method = "execute">
+            <result name="REGISTER">thankyou.jsp</result>
+            <result name="input">register.jsp</result>
+        </action>
+        
+        <action name="forgot" class="com.portal.action.ForgotPassAction" method = "execute">
+            <result name="success">updatedpass.jsp</result>
+            <result name="input">forgotpass.jsp</result>
+        </action>
+        
+        <action name = "employee" class = "com.portal.action.Employee"  method = "execute">
+         	<result name = "success">employee.jsp</result>
+      	</action>
+
+		<action name="report" class="com.portal.action.ReportAction" method = "execute">
+			<result name="REPORT">me.jsp</result>
+		</action>
+		
+		<action name="updatedetails" class="com.portal.action.UpdateAction" method = "execute">
+			<result name="UPDATE">update.jsp</result>
+		</action>
+		
+    </package>
+</struts>
